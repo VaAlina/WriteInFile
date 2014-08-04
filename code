@@ -1,15 +1,17 @@
 WriteInFile
 ===========
-
 package copyFromDirectory;
 
 import java.io.*;
 import java.util.*;
 
 public class WriteFile {
+	
+//	boolean tf = (a+b==result);
+	
 	static void printVar(){
 		int a = 2, b = 3;
-        System.out.print(a+" "+b+"=");
+        System.out.print(a+"+"+b+"=");
 	};
 	
     public static void main(String[] args) {
@@ -22,10 +24,13 @@ public class WriteFile {
         try {
           File file = new File("C://1", "example.txt");
           BufferedWriter output = new BufferedWriter(new FileWriter(file));
-          output.write(a+" + "+b+"="+result);
+          output.write(a+"+"+b+"="+result+" "+(a+b==result));
           output.close();
         } catch ( IOException e ) {
            e.printStackTrace();
         }
     }
 }
+
+
+
