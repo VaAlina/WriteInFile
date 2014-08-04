@@ -6,9 +6,6 @@ import java.io.*;
 import java.util.*;
 
 public class WriteFile {
-	
-//	boolean tf = (a+b==result);
-	
 	static void printVar(){
 		int a = 2, b = 3;
         System.out.print(a+"+"+b+"=");
