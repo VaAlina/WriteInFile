@@ -7,14 +7,22 @@ import java.io.*;
 import java.util.*;
 
 public class WriteFile {
+	static void printVar(){
+		int a = 2, b = 3;
+        System.out.print(a+" "+b+"=");
+	};
+	
     public static void main(String[] args) {
-    	Scanner sc = new Scanner(System.in);
-        String text = sc.nextLine();
+    	printVar();
+        Scanner sc = new Scanner(System.in);
+        int result = sc.nextInt();
+        int a = 2, b = 3;
+
         
         try {
           File file = new File("C://1", "example.txt");
           BufferedWriter output = new BufferedWriter(new FileWriter(file));
-          output.write(text);
+          output.write(a+" + "+b+"="+result);
           output.close();
         } catch ( IOException e ) {
            e.printStackTrace();
