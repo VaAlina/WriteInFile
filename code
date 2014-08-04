@@ -1,0 +1,23 @@
+WriteInFile
+===========
+
+package copyFromDirectory;
+
+import java.io.*;
+import java.util.*;
+
+public class WriteFile {
+    public static void main(String[] args) {
+    	Scanner sc = new Scanner(System.in);
+        String text = sc.nextLine();
+        
+        try {
+          File file = new File("C://1", "example.txt");
+          BufferedWriter output = new BufferedWriter(new FileWriter(file));
+          output.write(text);
+          output.close();
+        } catch ( IOException e ) {
+           e.printStackTrace();
+        }
+    }
+}
